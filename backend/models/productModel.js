@@ -2,8 +2,9 @@ import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
 
+    // removed is required for description to avoid bug, fix bug and add back is required
     name: { type: String, required:true },
-    description: { type: String, required:true },
+    description: { type: String },
     price: { type: Number, required:true },
     image: { type: Array, required:true },
     category: { type: String, required:true },
