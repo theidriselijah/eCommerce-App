@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react"
 import { ShopContext } from "../context/ShopContext"
 import Title from "../components/Title"
 import axios from "axios"
+import { toast } from "react-toastify"
 
 
 const Orders = () => {
@@ -34,7 +35,8 @@ const Orders = () => {
       }
 
     } catch (error) {
-      
+      console.log(error)
+      toast.error(error.message)
     }
   }
 
