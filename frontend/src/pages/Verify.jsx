@@ -7,6 +7,7 @@ import { toast } from "react-toastify"
 const Verify = () => {
 
     const { navigate, token, setCartItems, backendUrl } = useContext(ShopContext)
+    // eslint-disable-next-line no-unused-vars
     const [searchParams, setSearchParams] = useSearchParams()
 
     const success = searchParams.get('success')
